@@ -15,10 +15,17 @@ h3{
 }
 
 
+.wrapper{
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+body{
+   margin: 0;
+   font-family: "Poppins", sans-serif; 
+}
 
 
-
-@media (max-width:768px){
 
 
    .header{
@@ -44,7 +51,6 @@ h3{
    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
    font-size: larger;
    justify-content: space-evenly;
-   
    }
 
    ul :nth-child(1){
@@ -54,22 +60,21 @@ h3{
 
    ul :nth-child(2){
       text-decoration: none;
-color: black;
+   color: black;
    }
 
    .grid-1{
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, 1fr);
       grid-template-areas: 
       "pic1 pic1 pic1"
       "pic2 pic3 pic4";
-   
    }
 
    .grid-1 :nth-child(1){
       grid-area: pic1;
       padding: 1em;
+      border-radius: 5%;
    }
 
    .grid-1 :nth-child(2){
@@ -87,29 +92,81 @@ color: black;
       padding: 1em;
    }
 
+   #behind-the-dough{
+      display: flex;
+      padding: 1em;
+      padding-bottom: 3em;
+   }
+   
+   #behind-the-dough h2{
+      text-align: center;
+   }
 
-#first-article p{
-   display: grid;
-   grid-template-columns: 1fr;
-   padding: 0;
+   .grid-4{
+  
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    
+    #try-it-with .grp1{
+       grid-column: 1 / 3;
+       padding: 1em;
+       text-align: center;
+    }
+      
+    #try-it-with .grp2{
+       grid-column: 3 / 5;
+       padding: 1em;
+       text-align: center;
+    }
+    
+    #try-it-with .grp3{
+       grid-column: 1 / 3;
+       padding: 1em;
+       text-align: center;
+    }
+    
+    #try-it-with .grp4{
+       grid-column: 3 / 5;
+       padding: 1em;
+       text-align: center;
+    }
 
-}
 
-
-#Behind-the-dough{
-   display: flex;
-}
-
-#Behind-the-dough h2{
+footer{
+   background-color: black;
+   color: white;
    text-align: center;
+   padding: 1em;
 }
 
 
-#Comments {
 
+
+#first-group{
+   padding-bottom: 3em;
+ }
+.subtitle{
+   font-weight: bolder;
 }
 
-#Try-it-with h2{
+
+
+
+#comments {
+background-color: #000;
+color: #fff;
+padding: 1em;
+}
+
+#comments h2{
+   text-align: center;
+   ;
+}
+#comments blockquote{
+   padding-bottom: 2em;
+}
+#try-it-with h2{
    text-align: center;
 }
 
@@ -117,53 +174,315 @@ color: black;
   
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4,1fr);
-  
-
 }
 
-.grid-4 h5{
-   text-align: center;
-  
-}
-  
-.grid-4 :nth-child(1){
+#try-it-with .grp1{
    grid-column: 1 / 3;
-   padding: 1em;  
-   padding-bottom: 5em;
-   
+   padding: 1em;
+   text-align: center;
+}
+  
+#try-it-with .grp2{
+   grid-column: 3 / 5;
+   padding: 1em;
+   text-align: center;
 }
 
-.grid-4 :nth-child(2){
-   grid-column:  3/ 5;
+#try-it-with .grp3{
+   grid-column: 1 / 3;
    padding: 1em;
-   padding-bottom: 5em;
+   text-align: center;
+}
+
+#try-it-with .grp4{
+   grid-column: 3 / 5;
+   padding: 1em;
    text-align: center;
 }
 
 
-.grid-4 :nth-child(3){
-   grid-column: 1 /3;
+
+@media (min-width:758px) and (max-width:960px){
+
+      .header{
+         display: grid;
+         grid-template-columns: repeat(2, 1fr
+         );
+         
+      }
+
+      .header img{
+
+      max-width: 70%;
+      padding-left: 1em;
+      }
+
+      img{
+         width: 100%;
+      }
+
+      ul{
+      list-style: none;
+      display: flex;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: larger;
+      gap: 20px;
+   justify-content: end;
+   padding-right: 1em;
+      }
+
+      ul :nth-child(1){
+         text-decoration: none;
+         color: black;
+      }
+
+      ul :nth-child(2){
+         text-decoration: none;
+   color: black;
+      }
+
+      .grid-1{
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-areas: 
+         "pic1 pic2"
+         "pic3 pic4";
+      }
+
+      .grid-1 :nth-child(1){
+         grid-area: pic1;
+         padding: 1em;
+         border-radius: 5%;
+      }
+
+      .grid-1 :nth-child(2){
+         grid-area: pic2;
+         padding: 1em;
+         border-radius: 5%;
+      }
+
+      .grid-1 :nth-child(3){
+         grid-area: pic3;
+         padding: 1em;
+         border-radius: 5%;
+      }
+
+      .grid-1 :nth-child(4){
+         grid-area: pic4;
+         padding: 1em;
+         border-radius: 5%;
+      }
+
+
+#behind-the-dough .text{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 40px;
    padding: 1em;
+}
+
+         #behind-the-dough h2{
+            text-align: center;
+         }
+          
+
+
+
+   .comments{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+      
+   }
+
+   .comments h2{
+      text-align: center;
+   }
+
+   .grid-4{
    
-}
-
-.grid-4 :nth-child(4){
-   grid-column: 3 / 5;
-   padding: 1em;  
-}
-}
-
-
-
-
-
-
-
-
-
-@media (min-width:758px) and (max-width:960px){}
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+   }
    
+   #try-it-with .grp1{
+      grid-column: 1 / 3;
+      padding: 1em;
+      text-align: center;
+      
+   }
+      
+   #try-it-with .grp2{
+      grid-column: 3 / 5;
+      padding: 1em;
+      text-align: center;
+   }
+   
+   #try-it-with .grp3{
+      grid-column: 5 / 7;
+      padding: 1em;
+      text-align: center;
+      ;
+   }
+   
+   #try-it-with .grp4{
+      grid-column: 7 / 9;
+      padding: 1em;
+      text-align: center;
+   }
+
+
+   footer{
+      background-color: black;
+      color: white;
+      text-align: center;
+   }
+
+}
+   
+@media (min-width:960px)  {
+
+      .header{
+         display: grid;
+         grid-template-columns: repeat(2, 1fr
+         );
+         
+      }
+
+      .header img{
+
+      max-width: 35%;
+      padding-left: 1em;
+      }
+
+      img{
+         width: 100%;
+      }
+
+      ul{
+      list-style: none;
+      display: flex;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: larger;
+      gap: 20px;
+   justify-content: end;
+   padding-right: 1em;
+      }
+
+      ul :nth-child(1){
+         text-decoration: none;
+         color: black;
+      }
+
+      ul :nth-child(2){
+         text-decoration: none;
+   color: black;
+      }
+
+   #first-group .wrapper
+   {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding-right: 1em;
+   }
+
+   #first-group p:nth-child(6){
+      padding-bottom: 4em;
+      
+   }
+
+
+      .grid-1{
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-areas: 
+         "pic1 pic2"
+         "pic3 pic4";
+      }
+
+      .grid-1 :nth-child(1){
+         grid-area: pic1;
+         padding: 1em;
+         border-radius: 5%;
+      }
+
+      .grid-1 :nth-child(2){
+         grid-area: pic2;
+         padding: 1em;
+         border-radius: 5%;
+      }
+
+      .grid-1 :nth-child(3){
+         grid-area: pic3;
+         padding: 1em;
+         border-radius: 5%;
+      }
+
+      .grid-1 :nth-child(4){
+         grid-area: pic4;
+         padding: 1em;
+         border-radius: 5%;
+      }
+
+      #behind-the-dough .text{
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         gap: 40px;
+         padding: 1em;
+      }
+      
+               #behind-the-dough h2{
+                  text-align: center;
+               }
+
+   .comments{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   }
+
+   .comments h2{
+      text-align: center;
+   }
+
+   .grid-4{
+
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+   }
+
+   #try-it-with .grp1{
+      grid-column: 1 / 3;
+      padding: 1em;
+      text-align: center;
+      
+   }
+      
+   #try-it-with .grp2{
+      grid-column: 3 / 5;
+      padding: 1em;
+      text-align: center;
+   }
+
+   #try-it-with .grp3{
+      grid-column: 5 / 7;
+      padding: 1em;
+      text-align: center;
+      ;
+   }
+
+   #try-it-with .grp4{
+      grid-column: 7 / 9;
+      padding: 1em;
+      text-align: center;
+   }
+
+
+   footer{
+      background-color: black;
+      color: white;
+      text-align: center;
+   }
+
+}
 
 
 
@@ -185,23 +504,12 @@ footer{
 }
 
 
-#Comments{
-   background-color: #000;
-   color: white;
-margin: auto;
-padding: 1em;
-max-width: 700px;
-background-size: cover;
-}
-
-
-#Comments h2{
-text-align: center;}
 
 
 
-#first-article a:link,
-#first-article a:visited {
+
+.product-grid a:link,
+.product-grid a:visited {
   display:inline-block;
   padding: .5em 1em;
   background-color: #000;
@@ -213,8 +521,8 @@ text-align: center;}
 margin:auto;
 }
 
-#first-article a:hover,
-#first-article a:focus{
+.product-grid a:hover,
+.product-grid a:focus{
    background-color: #fafafa47;
    color: #000;
    margin: auto;  
