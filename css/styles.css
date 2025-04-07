@@ -92,6 +92,9 @@ body{
       padding: 1em;
    }
 
+   .sweetheart{
+      padding-left: 1em
+   }
    #behind-the-dough{
       display: flex;
       padding: 1em;
@@ -240,6 +243,8 @@ padding: 1em;
          text-decoration: none;
    color: black;
       }
+      
+
 
       .grid-1{
          display: grid;
@@ -273,7 +278,9 @@ padding: 1em;
          border-radius: 5%;
       }
 
-
+#first-group .sweetheart{
+   padding-left: 1em;
+}
 #behind-the-dough .text{
    display: grid;
    grid-template-columns: 1fr 1fr;
@@ -390,6 +397,7 @@ padding: 1em;
       
    }
 
+   
 
       .grid-1{
          display: grid;
